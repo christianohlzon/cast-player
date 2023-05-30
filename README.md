@@ -6,6 +6,6 @@ https://castplayer.netlify.app/
 
 Cast player that uses Chrome's built in cast tool. It let's you display subtitles when casting local files. The quality suffers a bit when using tab mirroring but to use regular media casting you would need to run a server to share your local files with your Chromecast.  
 
-Supports HTML5 video formats and some .mkv file.
+Supports HTML5 video formats and some .mkv files.
 
 Supports .vtt and .srt
