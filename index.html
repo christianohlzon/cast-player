@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Cast Player - Cast any video with subtitles to your Chromecast
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="castplayer-description">
+        <div id="topbar">
+          <h1>CastPlayer</h1>
+        </div>
+        <h2 id="castplayer-description-h2">Cast almost any video with subtitles to your Chromecast</h2>
+      </div>
+      <div id="dropzone">
+        <input type="file" onchange="handleInputChange(event)" id="videoUpload" />
+        <h3>Drop video here or click to select.</h3>
+      </div>
+    </div>
+    <link
+      href="https://unpkg.com/video.js/dist/video-js.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+    <script src="uploader.js"></script>
+  </body>
 </html>
