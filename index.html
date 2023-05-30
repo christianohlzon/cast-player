@@ -17,16 +17,34 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <div id="castplayer-description">
-        <div id="topbar">
-          <h1>CastPlayer</h1>
-        </div>
-        <h2 id="castplayer-description-h2">Cast almost any video with subtitles to your Chromecast</h2>
+    <div
+      id="root"
+      ondragover="event.preventDefault()"
+      ondrop="handleDrop(event)"
+    >
+      <div id="topbar">
+        <h1>CastPlayer</h1>
       </div>
       <div id="dropzone">
-        <input type="file" onchange="handleInputChange(event)" id="videoUpload" />
+        <input
+          type="file"
+          id="videoInput"
+          accept="video/*"
+          onchange="handleVideoInputChange(event)"
+        />
+        <img src="folder.svg" alt="Folder" />
         <h3>Drop video here or click to select.</h3>
+      </div>
+      <div id="castplayer-description">
+        <h2>Cast local videos with subtitles to your Chromecast.</h2>
+        <h3>Uses the Chrome browser's native Cast controls.</h3>
+        <p>
+          Supports HTML5 video formats (MP4, WebM, OGG) and some MKV files. </br>
+          Subtitles must be in SRT or WebVTT format.
+        </p>
+        <p>
+          To display subtitles when casting DON'T press "Optimize" when you start casting. 
+        </p>        
       </div>
     </div>
     <link
@@ -34,6 +52,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+    <script src="srt-webvtt.js"></script>
     <script src="uploader.js"></script>
   </body>
 </html>

@@ -2,9 +2,6 @@
 const blobToBufferOrString = (blob, readAs) => 
   new Promise((resolve, reject) => {
     const reader = new FileReader();
-    /**
-     * @param event 
-     */
     const loadedCb = (event) => {
       const buf = (event.target).result;
       reader.removeEventListener('loadend', loadedCb);
